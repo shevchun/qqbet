@@ -1,0 +1,106 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  &__top {
+    position: relative;
+    background: #000c28;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1380px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__top-left {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__logo {
+    position: relative;
+  }
+  &__logo-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__top-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+  &__info {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  &__info-cell {
+    position: relative;
+    flex: 0 0 auto;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid rgba(#7f838e, 0.2);
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+  &__info-cell-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 155%;
+    color: #7f838e;
+    svg {
+      flex: 0 0 auto;
+      margin-right: 5px;
+    }
+  }
+  &__info-cell-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155%;
+    color: #fff;
+  }
+  &__info-tel {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      position: relative;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 155%;
+      color: #fff;
+      transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        color: #f3c934;
+      }
+    }
+  }
+  &__btn {
+    flex: 0 0 auto;
+    margin-left: 40px;
+  }
+}

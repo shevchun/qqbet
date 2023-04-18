@@ -1,0 +1,37 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px rgba(253, 186, 95, 0.25);
+  background: #fff;
+  padding: 0 48px 0 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 155%;
+  text-align: center;
+  color: #000c28;
+  transition: 0.3s ease-in-out;
+  @include desktop-hover() {
+    box-shadow: 5px 5px 20px rgba(253, 186, 95, 0.4);
+    svg {
+      transform: translateX(2px);
+    }
+  }
+  span {
+    display: block;
+    padding: 11px 30px;
+    background: #f3c934;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -5px;
+    transition: 0.3s ease-in-out;
+  }
+}
