@@ -1,0 +1,124 @@
+.triggers {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__box {
+    position: relative;
+    display: flex;
+  }
+  &__title {
+    position: relative;
+    flex: 0 0 280px;
+    max-width: 280px;
+    width: 100%;
+    min-height: 236px;
+    padding: 40px 30px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &__title-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title-label {
+    position: relative;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 155%;
+    color: #011955;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 99px;
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__title-text {
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+    color: #000c28;
+  }
+  &__list {
+    position: relative;
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    padding: 30px;
+    text-decoration: none;
+    box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.05);
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      border-color: #0d4ee3;
+      box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
+      .triggers__item-btn {
+        color: #0d4ee3;
+        svg {
+          fill: #0d4ee3;
+        }
+      }
+    }
+  }
+  &__item-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__item-icon {
+    position: relative;
+    background: #eaf0f7;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 155%;
+    color: #000c28;
+  }
+  &__item-text {
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 155%;
+    color: #011955;
+    p {
+      margin: 0;
+    }
+  }
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155%;
+    color: #7f838e;
+    transition: 0.3s ease-in-out;
+    svg {
+      fill: #7f838e;
+      flex: 0 0 auto;
+      margin-left: 5px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}

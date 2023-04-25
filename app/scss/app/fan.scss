@@ -1,0 +1,122 @@
+.fan {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__info {
+    position: relative;
+    flex: 0 0 480px;
+    max-width: 480px;
+    width: 100%;
+    margin-right: 120px;
+  }
+  &__info-label {
+    position: relative;
+  }
+  &__info-title {
+    position: relative;
+  }
+  &__info-text {
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: #011955;
+    p {
+      margin: 0 0 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__info-btn {
+    position: relative;
+  }
+  &__holder {
+    position: relative;
+    flex: 1 1 auto;
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+  &__item {
+    position: relative;
+    flex: 0 0 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__item-info {
+    position: relative;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item-info-icon {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  &__item-info-text {
+    font-size: 14px;
+    line-height: 155%;
+    color: #000c28;
+  }
+  &__item-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 11px;
+    @include desktop-hover() {
+      .fan__item-title {
+        color: #f3c934;
+      }
+    }
+  }
+  &__item-img {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &__item-title {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+    color: #fff;
+    padding: 10px;
+    background: #000c28;
+    transition: .3s ease-in-out;
+  }
+}
