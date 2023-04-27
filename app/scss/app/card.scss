@@ -1,0 +1,111 @@
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 120px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__head {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #eaf0f7 0%, rgba(234, 240, 247, 0) 100%);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &__head-left {
+    position: relative;
+    padding: 40px;
+  }
+  &__head-title {
+    position: relative;
+    border-bottom: 1px solid #cccdd2;
+    padding-bottom: 30px;
+    margin: 0 0 30px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 135%;
+    color: #000c28;
+    span {
+      vertical-align: middle;
+      padding: 5px 10px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 135%;
+      color: #fff;
+      background: #0d4ee3;
+      border-radius: 5px;
+    }
+  }
+  &__text {
+    position: relative;
+  }
+  &__head-right {
+    position: relative;
+    flex: 0 0 650px;
+    max-width: 650px;
+    width: 100%;
+  }
+  &__head-img-label {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  &__body {
+    position: relative;
+  }
+  &__list {
+    position: relative;
+    margin-left: -20px;
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 30px 40px;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    &--imgs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__item-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__item-icon {
+    position: relative;
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3c934;
+    margin-right: 15px;
+  }
+  &__item-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+    color: #000c28;
+  }
+  &__item-text {
+    position: relative;
+  }
+}

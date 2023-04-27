@@ -1,0 +1,57 @@
+.rate {
+  position: relative;
+  margin-right: -5px;
+  &__default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-holder {
+    flex: 0 0 22px;
+    width: 22px;
+    height: 21px;
+    display: flex;
+    margin-left: 1px;
+    margin-right: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+  &__item-holder-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: none;
+    &.active {
+      display: flex;
+    }
+    svg {
+      flex: 0 0 auto;
+    }
+  }
+  &__item {
+    margin-left: 1px;
+    margin-right: 1px;
+    fill: #cccdd2;
+    .rate__item-holder-inner & {
+      fill: #f3c934;
+    }
+    .rate__item-holder & {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

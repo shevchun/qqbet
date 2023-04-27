@@ -3,6 +3,15 @@ import 'slick-carousel';
 
 export default () => {
 
+  if ($('.testimonials__slider').length) {
+    $('.testimonials__slider').slick({
+      slidesToShow: 3,
+      arrows: false,
+      infinite: true,
+      swipeToSlide: true
+    })
+  }
+
   if ($('.first-screen__slider').length) {
     $('.first-screen__slider').slick({
       slidesToShow: 1,

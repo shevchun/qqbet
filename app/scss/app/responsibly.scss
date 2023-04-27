@@ -1,0 +1,45 @@
+.responsibly {
+  position: relative;
+  margin-bottom: -40px;
+  z-index: 1;
+  &__box {
+    position: relative;
+    padding: 40px 60px;
+    background: #011955;
+    border-radius: 5px 5px 0px 0px;
+  }
+  &__head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 135%;
+    color: #fff;
+    img {
+      flex: 0 0 48px;
+      max-width: 48px;
+      margin-right: 20px;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+    }
+  }
+  &__text {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 155%;
+    color: #cccdd2;
+    p {
+      margin: 0 0 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

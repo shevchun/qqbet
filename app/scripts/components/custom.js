@@ -1,6 +1,10 @@
 import $ from 'jquery'
 
 export default () => {
+  $('.questions__head').on('click', function questionsFunc () {
+    $(this).parents('.questions__item').toggleClass('active')
+    $(this).siblings('.questions__item-body').slideToggle()
+  })
 
 // $('.header__mobile-menu').on('click', () => {
 //   $('.header__mobile').addClass('active')
@@ -27,28 +31,28 @@ export default () => {
 //     $('.lang').removeClass('active')
 //   });
 
-//   function isFloat(value) {
-//     return typeof value === 'number' &&
-//       !Number.isNaN(value) &&
-//       !Number.isInteger(value);
-//   }
+  function isFloat(value) {
+    return typeof value === 'number' &&
+      !Number.isNaN(value) &&
+      !Number.isInteger(value);
+  }
 
-//   $('[data-rate]').each((index, element) => {
-//     let val = $(element).attr('data-rate')
-//     if (!isFloat(val)) {
-//       val = parseFloat(val).toFixed(1)
-//     }
-//     const full = val.split('.')[0] || null
-//     const fraction = val.split('.')[1] || null
-//     $(element).find($('.rate__item-holder-inner')).each((i, item) => {
-//       if (i <= +full) {
-//         $(item).addClass('active')
-//       }
-//       if (i === +full) {
-//         $(item).addClass('active').css('width', `${fraction}0%`)
-//       }
-//     })
-//   })
+  $('[data-rate]').each((index, element) => {
+    let val = $(element).attr('data-rate')
+    if (!isFloat(val)) {
+      val = parseFloat(val).toFixed(1)
+    }
+    const full = val.split('.')[0] || null
+    const fraction = val.split('.')[1] || null
+    $(element).find($('.rate__item-holder-inner')).each((i, item) => {
+      if (i <= +full) {
+        $(item).addClass('active')
+      }
+      if (i === +full) {
+        $(item).addClass('active').css('width', `${fraction}0%`)
+      }
+    })
+  })
 
 //   $(window).on('scroll', function scrollPage() {
 //     const heightWindow = 50

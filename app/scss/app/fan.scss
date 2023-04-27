@@ -52,14 +52,15 @@
   &__list {
     position: relative;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-left: -20px;
     margin-top: -20px;
   }
   &__item {
     position: relative;
-    flex: 0 0 calc(33% - 20px);
-    max-width: calc(33% - 20px);
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
     width: 100%;
     margin-left: 20px;
     margin-top: 20px;
