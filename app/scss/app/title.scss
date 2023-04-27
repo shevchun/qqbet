@@ -5,4 +5,7 @@
   font-size: 42px;
   line-height: 135%;
   color: #000c28;
+  @include response(1200px) {
+    font-size: 28px;
+  }
 }

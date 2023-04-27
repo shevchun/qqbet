@@ -5,6 +5,9 @@
   &__box {
     position: relative;
     display: flex;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__title {
     position: relative;
@@ -15,6 +18,12 @@
     padding: 40px 30px;
     border-radius: 5px;
     overflow: hidden;
+    @include response(1200px) {
+      max-width: 100%;
+      min-height: auto;
+      padding: 32px 16px;
+      margin-bottom: 16px;
+    }
   }
   &__title-bg {
     position: absolute;
@@ -47,6 +56,9 @@
   &__list {
     position: relative;
     display: flex;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__item {
     position: relative;
@@ -59,6 +71,15 @@
     text-decoration: none;
     box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.05);
     transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      display: block;
+      margin-left: 0;
+      margin-bottom: 16px;
+      padding: 32px 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     @include desktop-hover() {
       border-color: #0d4ee3;
       box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);

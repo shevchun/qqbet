@@ -18,6 +18,13 @@
     z-index: 1;
     display: flex;
     width: 700px;
+    @include response(1400px) {
+      width: calc(100% - 32px);
+      transform: none;
+      justify-content: flex-end;
+      right: 16px;
+      left: 16px;
+    }
     .slick-track {
       margin-right: 0;
       max-width: 100%;

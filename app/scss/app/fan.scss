@@ -2,6 +2,10 @@
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
   &__bg {
     position: absolute;
     left: 0;
@@ -14,6 +18,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__info {
     position: relative;
@@ -21,6 +28,11 @@
     max-width: 480px;
     width: 100%;
     margin-right: 120px;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
   }
   &__info-label {
     position: relative;

@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   custom()
 })
 
-// $(window).on('load resize', () => {
-//   if ($(window).width() < 1200) {} 
-// })
+$(window).on('load resize', () => {
+  if ($(window).width() < 1200) {
+    $('.header__mobile').append($('.header__nav'))
+    $('.header__mobile').append($('.header__top-right'))
+  } else {
+    $('.header__bottom').append($('.header__nav'))
+    $('.header__top-right').insertAfter($('.header__top-left'))
+  }
+})

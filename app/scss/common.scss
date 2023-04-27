@@ -21,6 +21,9 @@ body {
   width: 100%;
   flex: 1 1 auto;
   padding-top: 140px;
+  @include response(1200px) {
+    padding-top: 78px;
+  }
 }
 
 .container {
@@ -29,6 +32,10 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  @include response(1400px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 // {
 //   max-height: 40px;

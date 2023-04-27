@@ -1,6 +1,19 @@
 import $ from 'jquery'
 
 export default () => {
+
+  if ($(window).width() < 1200) {
+    $('.header__mobile-menu').on('click', ()=> {
+      $('.header').toggleClass('active-menu')
+      $('.menu-item-has-children').removeClass('active')
+    })
+
+    $('.menu-item-has-children > a, .menu-item-has-children > span').on('click', function mobileMenu () {
+      $(this).parents('.menu-item-has-children').toggleClass('active')
+      return false
+    })
+  }
+
   $('.questions__head').on('click', function questionsFunc () {
     $(this).parents('.questions__item').toggleClass('active')
     $(this).siblings('.questions__item-body').slideToggle()
