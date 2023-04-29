@@ -23,6 +23,7 @@ body {
   padding-top: 140px;
   @include response(1200px) {
     padding-top: 78px;
+    overflow: hidden;
   }
 }
 

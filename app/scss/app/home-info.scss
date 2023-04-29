@@ -3,17 +3,30 @@
   padding-top: 70px;
   padding-bottom: 70px;
   z-index: 1;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    overflow: hidden;
+  }
   &__box {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include response(1200px) {
+      flex-direction: column-reverse;
+    }
   }
   &__left {
     position: relative;
     flex: 0 0 680px;
     max-width: 680px;
     width: 100%;
+    @include response(1200px) {
+      flex: 0 0 auto;
+      max-width: 100%;
+      margin-top: 16px;
+    }
   }
   &__decor {
     position: absolute;
@@ -21,7 +34,20 @@
     left: 50%;
     margin-left: -614px;
     margin-top: -345px;
-    max-width: none;
+    @include response(1200px) {
+      margin-left: 0;
+      margin-right: 0;
+      left: 16px;
+      width: calc(100% - 32px);
+      top: 16px;
+      margin-top: 0;
+    }
+    img {
+      max-width: none;
+      @include response(1200px) {
+        max-width: 100%;
+      }
+    }
   }
   &__triggers {
     position: relative;
@@ -30,6 +56,15 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    @include response(1200px) {
+      margin-bottom: 24px;
+      margin-top: 0;
+      flex-wrap: wrap;
+      padding-top: 0;
+      margin-left: -4px;
+      margin-right: -4px;
+      justify-content: center;
+    }
   }
   &__triggers-item {
     position: relative;
@@ -40,20 +75,46 @@
     box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
     border-radius: 50px 50px 5px 5px;
     padding: 30px;
+    @include response(1200px) {
+      flex: 0 0 calc(50% - 8px);
+      max-width: calc(50% - 8px);
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 16px 10px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
     &:nth-child(1) {
       border-top-left-radius: 5px;
+      @include response(1200px) {
+        order: 2;
+      }
     }
     &:nth-child(2) {
       transform: translateY(-40px);
+      @include response(1200px) {
+        transform: none;
+        order: 1;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
     }
     &:nth-child(3) {
       border-top-right-radius: 5px;
+      @include response(1200px) {
+        order: 3;
+      }
     }
   }
   &__triggers-item-img {
     text-align: center;
     margin-bottom: 10px;
     position: relative;
+    @include response(767px) {
+      width: 64px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__triggers-item-title {
     font-weight: 600;
@@ -73,6 +134,10 @@
     flex: 0 0 580px;
     max-width: 580px;
     width: 100%;
+    @include response(1200px) {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
   }
   &__label {
     position: relative;

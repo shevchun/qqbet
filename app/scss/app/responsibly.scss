@@ -10,6 +10,11 @@
     padding: 40px 60px;
     background: #011955;
     border-radius: 5px 5px 0px 0px;
+    @include response(1200px) {
+      margin-left: -16px;
+      margin-right: -16px;
+      padding: 48px 16px;
+    }
   }
   &__head {
     position: relative;

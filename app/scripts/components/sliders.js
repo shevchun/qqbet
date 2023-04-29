@@ -8,7 +8,21 @@ export default () => {
       slidesToShow: 3,
       arrows: false,
       infinite: true,
-      swipeToSlide: true
+      swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     })
   }
 

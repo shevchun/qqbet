@@ -3,6 +3,10 @@
   padding-top: 100px;
   padding-bottom: 40px;
   background: #eaf0f7;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -11,6 +15,9 @@
     right: 0;
     height: 217px;
     background: #fff;
+    @include response(1200px) {
+      height: 100px;
+    }
   }
   &::after {
     content: "";
@@ -23,6 +30,9 @@
     background: #0d4ee3;
     opacity: 0.6;
     filter: blur(225px);
+    @include response(1200px) {
+      display: none;
+    }
   }
   &__box {
     position: relative;
@@ -42,10 +52,19 @@
     padding: 30px;
     margin: 0 0 30px;
     text-align: center;
+    @include response(1200px) {
+      padding-bottom: 16px;
+      &.title {
+        margin-bottom: 0;
+      }
+    }
   }
   &__options {
     position: relative;
     margin-bottom: 30px;
+    @include response(1200px) {
+      margin-bottom: 0;
+    }
   }
   &__tab {
     position: relative;
@@ -56,6 +75,9 @@
       .join__tab-img {
         margin-right: 0;
         margin-left: 60px;
+        @include response(1200px) {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -65,6 +87,10 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 30px 40px;
+    @include response(1200px) {
+      display: block;
+      padding: 16px 16px 40px;
+    }
   }
   &__tab-img {
     position: relative;
@@ -74,6 +100,11 @@
     margin-right: 60px;
     border-radius: 5px;
     overflow: hidden;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
     img {
       width: 100%;
     }
@@ -99,6 +130,9 @@
     font-size: 24px;
     line-height: 135%;
     color: #000c28;
+    @include response(1200px) {
+      font-size: 20px;
+    }
   }
   &__tab-text {
     position: relative;
@@ -108,6 +142,10 @@
     background: #eaf0f7;
     border-top: 1px solid #cccdd2;
     padding: 20px;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
   &__list {
     position: relative;
@@ -117,6 +155,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include response(1200px) {
+      overflow-x: auto;
+      justify-content: flex-start;
+      margin-left: -16px;
+      margin-right: -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     li {
       flex: 0 0 auto;
       margin-right: 5px;

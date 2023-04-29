@@ -3,6 +3,12 @@ import $ from 'jquery'
 export default () => {
 
   if ($(window).width() < 1200) {
+    $('.accounts__item').eq(0).addClass('active')
+    $('.accounts__item').on('click', function accFunc () {
+      $('.accounts__item').removeClass('active')
+      $(this).addClass('active')
+    })
+
     $('.header__mobile-menu').on('click', ()=> {
       $('.header').toggleClass('active-menu')
       $('.menu-item-has-children').removeClass('active')

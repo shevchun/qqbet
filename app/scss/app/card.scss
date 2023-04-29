@@ -4,6 +4,11 @@
   border-radius: 5px;
   padding: 30px;
   margin-bottom: 120px;
+  @include response(1200px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 32px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -15,10 +20,17 @@
     background: linear-gradient(180deg, #eaf0f7 0%, rgba(234, 240, 247, 0) 100%);
     border-radius: 5px;
     overflow: hidden;
+    @include response(1200px) {
+      display: block;
+      margin-bottom: 16px;
+    }
   }
   &__head-left {
     position: relative;
     padding: 40px;
+    @include response(1200px) {
+      padding: 32px 16px;
+    }
   }
   &__head-title {
     position: relative;
@@ -29,6 +41,14 @@
     font-size: 24px;
     line-height: 135%;
     color: #000c28;
+    @include response(1200px) {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
     span {
       vertical-align: middle;
       padding: 5px 10px;
@@ -38,21 +58,40 @@
       color: #fff;
       background: #0d4ee3;
       border-radius: 5px;
+      @include response(1200px) {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
     }
   }
   &__text {
     position: relative;
+    @include response(1200px) {
+      &.text-content {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
   }
   &__head-right {
     position: relative;
     flex: 0 0 650px;
     max-width: 650px;
     width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
   }
   &__head-img-label {
     position: absolute;
     top: 24px;
     left: 24px;
+    @include response(1200px) {
+      top: 16px;
+      left: 16px;
+      width: 48px;
+    }
   }
   &__body {
     position: relative;
@@ -74,10 +113,21 @@
     padding: 30px 40px;
     border: 1px solid #cccdd2;
     border-radius: 5px;
+    @include response(1200px) {
+      padding: 16px;
+    }
+    @include response(767px) {
+      flex: 0 0 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
     &--imgs {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include response(1200px) {
+        align-self: center;
+        padding-bottom: 60px;
+      }
     }
   }
   &__item-head {
@@ -107,5 +157,17 @@
   }
   &__item-text {
     position: relative;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item-decor {
+    @include response(1200px) {
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform-origin: 50% 50%;
+      transform: translateX(-50%) rotate(-90deg);
+    }
   }
 }

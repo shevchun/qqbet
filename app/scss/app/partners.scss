@@ -3,6 +3,10 @@
   background: #000c28;
   padding-top: 60px;
   padding-bottom: 100px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -11,6 +15,9 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include response(1200px) {
+      display: none;
+    }
   }
   &::before {
     content: "";
@@ -20,6 +27,9 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include response(1200px) {
+      display: none;
+    }
   }
   &__label {
     position: relative;
@@ -32,6 +42,9 @@
     line-height: 135%;
     text-align: center;
     color: #fff;
+    @include response(1200px) {
+      margin-bottom: 30px;
+    }
   }
   &__list {
     position: relative;
@@ -40,6 +53,12 @@
     margin-top: -20px;
     flex-wrap: wrap;
     z-index: 1;
+    @include response(1200px) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin-right: -20px;
+      padding-right: 20px;
+    }
   }
   &__item {
     position: relative;
@@ -55,6 +74,10 @@
     padding-top: 60px;
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      flex: 0 0 280px;
+      max-width: 280px;
+    }
     @include desktop-hover() {
       background: #fff;
     }
@@ -79,6 +102,10 @@
     display: box;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     p {
       margin: 0;
     }
@@ -89,6 +116,10 @@
     padding: 39px 20px;
     display: flex;
     justify-content: center;
+    @include response(1200px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   &__item-btn {
     position: relative;

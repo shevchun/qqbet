@@ -3,6 +3,10 @@
   background: #000c28;
   padding-top: 100px;
   padding-bottom: 100px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   &__decor {
     position: absolute;
     top: 0;
@@ -12,6 +16,9 @@
   &__head {
     position: relative;
     margin-bottom: 80px;
+    @include response(1200px) {
+      margin-bottom: 48px;
+    }
   }
   &__label {
     position: relative;

@@ -2,16 +2,26 @@
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   &__box {
     position: relative;
     display: flex;
     justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__left {
     position: relative;
     flex: 0 0 380px;
     max-width: 380px;
     width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
   }
   &__label {
     position: relative;
@@ -24,6 +34,9 @@
     flex: 0 0 780px;
     max-width: 780px;
     width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
   }
   &__list {
     position: relative;
@@ -44,10 +57,13 @@
   }
   &__head {
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 50px 15px 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    @include response(1200px) {
+      padding: 16px 40px 16px 16px;
+    }
   }
   &__icon {
     position: relative;
@@ -70,6 +86,9 @@
     line-height: 135%;
     color: #7f838e;
     transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      font-size: 16px;
+    }
     .questions__item.active & {
       color: #000c28;
     }
@@ -114,6 +133,9 @@
     position: relative;
     padding: 20px;
     display: none;
+    @include response(1200px) {
+      padding: 16px;
+    }
     &::before {
       content: "";
       position: absolute;

@@ -3,6 +3,7 @@
   background: #000c28;
   padding-top: 100px;
   padding-bottom: 50px;
+  overflow: hidden;
   @include response(1200px) {
     padding: 32px 16px;
   }
