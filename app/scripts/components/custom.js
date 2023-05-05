@@ -2,6 +2,10 @@ import $ from 'jquery'
 
 export default () => {
 
+  if ($('.holder__aside-sticky').length) {
+    $('.wrapper').addClass('wrapper--no-ovh')
+  }
+
   if ($(window).width() < 1200) {
     $('.accounts__item').eq(0).addClass('active')
     $('.accounts__item').on('click', function accFunc () {

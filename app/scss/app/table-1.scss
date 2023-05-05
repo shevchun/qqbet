@@ -1,0 +1,52 @@
+.table-1 {
+  position: relative;
+  background: #fff;
+  border: 1px solid #cccdd2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+  @include response(1200px) {
+    padding: 16px;
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccdd2;
+    @include response(1200px) {
+      display: block;
+    }
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+  &__cell {
+    position: relative;
+    &:first-child {
+      display: flex;
+      padding: 10px;
+      align-items: flex-start;
+      flex: 0 0 260px;
+      max-width: 260px;
+      width: 100%;
+      margin-right: 30px;
+      @include response(1200px) {
+        max-width: 100%;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 0;
+      }
+      svg {
+        flex: 0 0 auto;
+        margin-right: 15px;
+      }
+    }
+  }
+}

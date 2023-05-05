@@ -120,7 +120,6 @@
     box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
     border-radius: 5px;
     overflow: hidden;
-    padding-bottom: 11px;
     @include desktop-hover() {
       .fan__item-title {
         color: #f3c934;

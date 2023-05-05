@@ -102,6 +102,10 @@
     line-height: 135%;
     color: #011a28;
     margin: 0 0 25px;
+    @include response(1200px) {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -111,6 +115,10 @@
     font-size: 34px;
     line-height: 135%;
     margin: 0 0 25px;
+    @include response(1200px) {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -120,6 +128,10 @@
     font-size: 28px;
     line-height: 135%;
     margin: 0 0 25px;
+    @include response(1200px) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -129,11 +141,34 @@
     font-size: 24px;
     line-height: 135%;
     margin: 0 0 25px;
+    @include response(1200px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
     &:first-child {
       margin-top: 0;
     }
   }
-  img {
+  h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    margin: 0 0 25px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h6 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+    margin: 0 0 25px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  > img {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     margin: 10px 0 20px;
@@ -143,6 +178,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  hr {
+    border: 0;
+    border-bottom: 1px solid #cccdd2;
   }
   // a {
   //   color: #000;
@@ -167,4 +206,28 @@
   //   td {
   //   }
   // }
+}
+
+.img-description {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  &__box {
+    position: relative;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf0f7;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155%;
+    img {
+      flex: 0 0 auto;
+      margin: 0 10px 0 0;
+    }
+  }
 }

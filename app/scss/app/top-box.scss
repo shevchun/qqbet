@@ -1,0 +1,106 @@
+.top-box {
+  position: relative;
+  @include response(1200px) {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include response(1200px) {
+      display: block;
+    }
+  }
+  &__left {
+    position: relative;
+    flex: 1 1 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include response(1200px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  &__label {
+    position: relative;
+  }
+  &__title {
+    position: relative;
+    color: #fff;
+  }
+  &__text {
+    position: relative;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  &__triggers {
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: -16px;
+    margin-left: -20px;
+    flex-wrap: wrap;
+    @include response(1200px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__triggers-item {
+    position: relative;
+    flex: 0 0 auto;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 16px;
+  }
+  &__triggers-item-img {
+    position: relative;
+    flex: 0 0 54px;
+    margin-right: 10px;
+    @include response(1200px) {
+      flex: 0 0 40px;
+    } 
+  }
+  &__triggers-item-box {
+    position: relative;
+  }
+  &__triggers-item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #fff;
+  }
+  &__triggers-item-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 155%;
+    color: #fff;
+  }
+  &__btn {
+    position: relative;
+  }
+  &__right {
+    position: relative;
+    flex: 0 0 780px;
+    margin-left: 20px;
+    @include response(1200px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

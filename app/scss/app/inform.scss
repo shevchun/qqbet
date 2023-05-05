@@ -1,0 +1,83 @@
+.inform {
+  position: relative;
+  background: #011955;
+  border-radius: 5px;
+  padding: 40px 60px;
+  @include response(1200px) {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 0;
+    padding: 42px 16px;
+  }
+  &__head {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  &__head-icon {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 20px;
+  }
+  &__head-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 135%;
+    color: #fff;
+  }
+  &__text {
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 155%;
+    color: #cccdd2;
+  }
+  &__triggers {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+  }
+  &__triggers-item {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__triggers-item-img {
+    position: relative;
+    flex: 0 0 36px;
+    max-width: 36px;
+    width: 100%;
+    margin-right: 10px;
+  }
+  &__triggers-item-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+    color: #fff;
+  }
+  &__text-small {
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 155%;
+    color: #cccdd2;
+  }
+  &__btn-box {
+    position: relative;
+  }
+  &__btn {
+    position: relative;
+  }
+}
