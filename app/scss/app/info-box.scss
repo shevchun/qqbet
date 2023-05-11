@@ -1,0 +1,48 @@
+.info-box {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &__holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
+  }
+  &__content {
+    position: relative;
+    flex: 0 0 580px;
+    max-width: 580px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &__label {
+    position: relative;
+  }
+  &__title {
+    position: relative;
+  }
+  &__text {
+    position: relative;
+  }
+  &__img {
+    position: relative;
+    flex: 0 0 680px;
+    max-width: 680px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

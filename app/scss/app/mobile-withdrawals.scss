@@ -1,0 +1,75 @@
+.mobile-withdrawals {
+  position: relative;
+  padding-top: 50px;
+  @include response(1200px) {
+    padding-top: 0;
+  }
+  &__box {
+    position: relative;
+    padding: 40px 60px;
+    background: #011955;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include response(1200px) {
+      padding: 48px 16px;
+      margin-left: -16px;
+      margin-right: -16px;
+      border-radius: 0;
+      display: block;
+    }
+  }
+  &__left {
+    position: relative;
+    flex: 0 0 520px;
+    max-width: 520px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &__head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    flex: 0 0 auto;
+    margin-right: 20px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 135%;
+    color: #fff;
+  }
+  &__text {
+    margin-bottom: 30px;
+    &.text-content {
+      color: #eaf0f7;
+    }
+  }
+  &__btn-box {
+    position: relative;
+  }
+  &__btn {
+    position: relative;
+  }
+  &__img {
+    position: relative;
+    flex: 0 0 620px;
+    max-width: 620px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    @include response(1200px) {
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

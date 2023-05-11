@@ -19,7 +19,9 @@
   &__holder {
     position: relative;
     display: flex;
-    align-items: center;
+    &--aic {
+      align-items: center;
+    }
     @include response(1200px) {
       display: block;
     }
@@ -40,6 +42,11 @@
   &__title {
     position: relative;
     color: #fff;
+    @include response(1200px) {
+      &.title {
+        font-size: 34px;
+      }
+    }
   }
   &__text {
     position: relative;
@@ -116,8 +123,10 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    padding-top: 74px;
     @include response(1200px) {
       margin-left: -8px;
+      padding-top: 0;
     }
   }
   &__bonuses-item {
