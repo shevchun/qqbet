@@ -27,8 +27,8 @@
   &__left {
     position: relative;
     flex: 1 1 auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 74px;
+    padding-bottom: 74px;
     @include response(1200px) {
       padding-top: 0;
       padding-bottom: 0;
@@ -45,6 +45,9 @@
     position: relative;
     color: #fff;
     margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__triggers {
     position: relative;
@@ -72,7 +75,7 @@
     margin-right: 10px;
     @include response(1200px) {
       flex: 0 0 40px;
-    } 
+    }
   }
   &__triggers-item-box {
     position: relative;
@@ -95,12 +98,73 @@
   &__right {
     position: relative;
     flex: 0 0 780px;
+    max-width: 780px;
     margin-left: 20px;
     @include response(1200px) {
       display: none;
+      &--show-mobile {
+        display: block;
+        margin-top: 30px;
+        margin-left: 0;
+      }
     }
-    img {
+    > img {
       width: 100%;
+    }
+  }
+  &__bonuses {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    @include response(1200px) {
+      margin-left: -8px;
+    }
+  }
+  &__bonuses-item {
+    position: relative;
+    padding: 20px 30px;
+    width: 180px;
+    flex: 0 0 180px;
+    background: #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include response(1200px) {
+      flex: 0 0 calc(33.333% - 8px);
+      max-width: calc(33.333% - 8px);
+      width: 100%;
+      margin-left: 8px;
+      padding: 16px 5px;
+    }
+  }
+  &__bonuses-item-img {
+    position: relative;
+    margin-bottom: 10px;
+    @include response(1200px) {
+      width: 40px;
+      margin-bottom: 8px;
+    }
+  }
+  &__bonuses-item-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #000c28;
+    @include response(1200px) {
+      font-size: 18px;
+    }
+  }
+  &__bonuses-item-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 155%;
+    color: #000c28;
+    @include response(1200px) {
+      font-size: 10px;
     }
   }
 }

@@ -2,11 +2,32 @@ import $ from 'jquery'
 
 export default () => {
 
+  const copyContent = async (codeVal) => {
+    try {
+      await navigator.clipboard.writeText(codeVal)
+      alert('Code copied')
+    } catch (err) {
+      alert('Failed to copy')
+    }
+  }
+
+  $('.js-copy-code-btn').on('click', function copy() {
+    const codeVal = $(this).siblings('.js-copy-code').attr('data-code')
+    copyContent(codeVal)
+  })
+
+
   if ($('.holder__aside-sticky').length) {
     $('.wrapper').addClass('wrapper--no-ovh')
   }
 
   if ($(window).width() < 1200) {
+    if ($('.bonuses__item').length) {
+      $('.bonuses__item').each(function() {
+        $(this).find('.bonuses__item-label').insertAfter($(this).find('.bonuses__item-title'))
+      })
+    }
+
     $('.accounts__item').eq(0).addClass('active')
     $('.accounts__item').on('click', function accFunc () {
       $('.accounts__item').removeClass('active')

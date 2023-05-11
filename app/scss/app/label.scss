@@ -44,6 +44,29 @@
       }
     }
   }
+  &--blue {
+    color: #eaf0f7;
+    span {
+      &::before {
+        background: #fff;
+        opacity: 1;
+      }
+      &::after {
+        background: #0d4ee3;
+      }
+    }
+  }
+  &--blue2 {
+    span {
+      &::before {
+        background: #0d4ee3;
+        opacity: 1;
+      }
+      &::after {
+        background: #000c28;
+      }
+    }
+  }
   &--center {
     text-align: center;
   }
