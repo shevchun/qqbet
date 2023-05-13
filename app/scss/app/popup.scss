@@ -1,0 +1,64 @@
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100vh);
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    .popup__overlay {
+      opacity: 1;
+    }
+    .popup__box {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(#000, 0.5);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  &__box {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+    flex: 0 0 860px;
+    max-width: 860px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease-in-out;
+  }
+  &__review-icon {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__review-title {
+    position: relative;
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 135%;
+  }
+  &__review-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: #7f838e;
+  }
+}

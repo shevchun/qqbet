@@ -35,6 +35,14 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+    .top-box--small & {
+      padding-top: 57px;
+      padding-bottom: 57px;
+      @include response(1200px) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
   }
   &__label {
     position: relative;
@@ -46,6 +54,9 @@
       &.title {
         font-size: 34px;
       }
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   &__text {
