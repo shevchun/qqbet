@@ -1,0 +1,116 @@
+.triggers-convinced {
+  position: relative;
+  padding-top: 100px;
+  background: #eaf0f7;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 363px;
+    height: 363px;
+    left: -302px;
+    top: -139px;
+    background: #f3c934;
+    opacity: 0.6;
+    filter: blur(250px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 353px;
+    height: 353px;
+    top: 181px;
+    right: -280px;
+    background: #0d4ee3;
+    opacity: 0.6;
+    filter: blur(225px);
+  }
+  &__box {
+    position: relative;
+    max-width: 1180px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__label {
+    position: relative;
+  }
+  &__title {
+    &.title {
+      text-align: center;
+      margin-bottom: 60px;
+      @include response(1200px) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -20px;
+    margin-bottom: -100px;
+    z-index: 1;
+    @include response(1200px) {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    @include response(1200px) {
+      flex: 0 0 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      padding: 32px 16px;
+    }
+    &--blue {
+      background: #0d4ee3;
+      border-color: #0d4ee3;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      flex: 0 0 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      @include response(1200px) {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+      }
+    }
+  }
+  &__head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__icon {
+    position: relative;
+    flex: 0 0 48px;
+    margin-right: 10px;
+  }
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    .triggers-convinced__item--blue & {
+      color: #fff;
+    }
+  }
+  &__item-text {
+    .triggers-convinced__item--blue & {
+      color: #fff;
+    }
+  }
+}

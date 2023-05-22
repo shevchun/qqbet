@@ -80,6 +80,9 @@
     }
     @include desktop-hover() {
       background: #fff;
+      .partners__item-btn {
+        box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
+      }
     }
   }
   &__item-img {

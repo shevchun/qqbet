@@ -18,7 +18,7 @@
   color: #000c28;
   transition: 0.3s ease-in-out;
   @include desktop-hover() {
-    box-shadow: 5px 5px 20px rgba(253, 186, 95, 0.4);
+    box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
     svg {
       transform: translateX(2px);
     }
@@ -34,6 +34,12 @@
     right: 15px;
     margin-top: -5px;
     transition: 0.3s ease-in-out;
+  }
+  &--white {
+    background: #f3c934;
+    span {
+      background: #fff;
+    }
   }
 }
 

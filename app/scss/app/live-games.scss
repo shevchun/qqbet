@@ -1,0 +1,119 @@
+.live-games {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background: #000c28;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 658px;
+    @include response(1200px) {
+      height: 100%;
+    }
+  }
+  &__label {
+    position: relative;
+  }
+  &__title {
+    &.title {
+      text-align: center;
+      color: #fff;
+    }
+  }
+  &__text {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto 60px;
+    &.text-content {
+      color: #fff;
+    }
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -20px;
+    @include response(1200px) {
+      margin-left: -16px;
+      margin-right: -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+    }
+  }
+  &__item {
+    position: relative;
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
+    border-radius: 5px;
+    padding-top: 40px;
+    overflow: hidden;
+    @include response(1200px) {
+      flex: 0 0 280px;
+      max-width: 280px;
+      margin-right: 20px;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+  &__item-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  &__item-icon {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #000c28;
+  }
+  &__item-text {
+    padding-left: 29px;
+    padding-right: 29px;
+    margin-bottom: 30px;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  &__item-img {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &__item-btn-box {
+    position: relative;
+    text-align: center;
+    padding: 30px;
+    background: #eaf0f7;
+  }
+  &__item-btn {
+    position: relative;
+  }
+}

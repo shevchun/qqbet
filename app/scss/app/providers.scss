@@ -1,0 +1,220 @@
+.providers {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
+  }
+  &__info {
+    position: relative;
+    flex: 0 0 580px;
+    max-width: 580px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+  &__label {
+    position: relative;
+  }
+  &__title {
+    position: relative;
+  }
+  &__text {
+    position: relative;
+  }
+  &__sliders {
+    position: relative;
+    flex: 0 0 680px;
+    max-width: 680px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    overflow: hidden;
+    @include response(1200px) {
+      max-width: 100%;
+    }
+  }
+  &__nav {
+    padding: 20px 30px;
+    background: #eaf0f7;
+    border-bottom: 1px solid #cccdd2;
+    @include response(1200px) {
+      padding: 16px 20px;
+    }
+    .slick-slide {
+      margin-right: 5px;
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      padding: 5px;
+      margin-top: -12px;
+      display: flex;
+      cursor: pointer;
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        svg {
+          fill: #000c28;
+        }
+      }
+      svg {
+        fill: #7f838e;
+        transition: 0.3s ease-in-out;
+      }
+      &.slick-prev {
+        left: 5px;
+        @include response(1200px) {
+          left: 0;
+        }
+      }
+      &.slick-next {
+        right: 5px;
+        @include response(1200px) {
+          right: 0;
+        }
+      }
+      &.slick-disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  &__nav-item {
+    vertical-align: top;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155%;
+    color: #7f838e;
+    text-align: center;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    .slick-current & {
+      color: #000c28;
+      background: #f3c934;
+      border-color: #f3c934;
+    }
+  }
+  &__slider {
+    position: relative;
+  }
+  &__slider-item {
+    vertical-align: top;
+    position: relative;
+    padding: 30px;
+    @include response(1200px) {
+      padding: 32px 16px;
+    }
+  }
+  &__slider-head {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccdd2;
+  }
+  &__slider-item-title {
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 135%;
+    color: #000c28;
+  }
+  &__slider-item-text {
+    margin-bottom: 20px;
+  }
+  &__slider-available {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccdd2;
+    display: flex;
+    @include response(1200px) {
+      display: block;
+    }
+  }
+  &__slider-available-item {
+    position: relative;
+    flex: 0 0 auto;
+    border-right: 1px solid #cccdd2;
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    padding-right: 20px;
+    margin-right: 20px;
+    @include response(1200px) {
+      margin-right: 0;
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-right: 0;
+    }
+    &:last-child {
+      border-right: 0;
+      @include response(1200px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__slider-available-item-icon {
+    position: relative;
+    flex: 0 0 32px;
+    margin-right: 10px;
+  }
+  &__slider-available-item-box {
+    position: relative;
+  }
+  &__slider-available-item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+  }
+  &__slider-available-item-val {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 155%;
+    svg {
+      flex: 0 0 auto;
+      margin-right: 4px;
+    }
+  }
+  &__slider-btn-box {
+    position: relative;
+  }
+  &__slider-btn {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155%;
+    color: #0d4ee3;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    @include desktop-hover() {
+      text-decoration: underline;
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-left: 5px;
+    }
+  }
+}

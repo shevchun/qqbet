@@ -25,9 +25,7 @@
   }
   &__head-left {
     position: relative;
-    flex: 0 0 268px;
     max-width: 268px;
-    width: 100%;
     display: flex;
     align-items: center;
     margin-right: 30px;
@@ -35,6 +33,10 @@
       max-width: 100%;
       margin-right: 0;
       margin-bottom: 16px;
+    }
+    &--full {
+      max-width: none;
+      margin-right: 0;
     }
   }
   &__head-img {
@@ -50,6 +52,7 @@
   }
   &__head-right {
     position: relative;
+    flex: 0 0 auto;
   }
   &__list {
     position: relative;

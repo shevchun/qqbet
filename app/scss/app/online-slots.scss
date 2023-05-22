@@ -1,0 +1,164 @@
+.online-slots {
+  position: relative;
+  background: #eaf0f7;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  @include response(1200px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 363px;
+    height: 363px;
+    right: -267px;
+    top: 211px;
+    background: #f3c934;
+    opacity: 0.6;
+    filter: blur(250px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    position: absolute;
+    width: 353px;
+    height: 353px;
+    left: -257px;
+    top: -76px;
+    background: #0d4ee3;
+    opacity: 0.4;
+    filter: blur(225px);
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
+  }
+  &__info {
+    position: relative;
+    flex: 0 0 580px;
+    max-width: 580px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-bottom: 48px;
+    }
+  }
+  &__label {
+    position: relative;
+  }
+  &__title {
+    position: relative;
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__btn-box {
+    position: relative;
+  }
+  &__btn {
+    position: relative;
+  }
+  &__slider-box {
+    position: relative;
+    flex: 0 0 680px;
+    max-width: 680px;
+    width: 100%;
+    background: #011955;
+    border-radius: 5px;
+    padding: 40px 80px;
+    @include response(1200px) {
+      max-width: calc(100% + 32px);
+      width: calc(100% + 32px);
+      margin-left: -16px;
+      margin-right: -16px;
+      border-radius: 0;
+      padding: 40px 16px;
+    }
+  }
+  &__slider-title {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  &__slider {
+    position: relative;
+    margin-right: -20px;
+    @include response(1200px) {
+      margin-left: -16px;
+      margin-right: -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      display: flex;
+      overflow-x: auto;
+    }
+    .slick-slide {
+      margin-right: 20px;
+      > div {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      margin-top: -24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1;
+      background: #0d4ee3;
+      transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        background: #f3c934;
+      }
+      svg {
+        fill: #fff;
+        transition: 0.3s ease-in-out;
+      }
+      &.slick-prev {
+        left: -104px;
+      }
+      &.slick-next {
+        right: -84px;
+      }
+      &.slick-disabled {
+        background: #7f838e;
+        svg {
+          fill: #cccdd2;
+        }
+      }
+    }
+  }
+  &__slider-item {
+    position: relative;
+    vertical-align: top;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #cccdd2;
+    border-radius: 5px;
+    overflow: hidden;
+    @include response(1200px) {
+      flex: 0 0 140px;
+      max-width: 140px;
+      width: 100%;
+      margin-right: 16px;
+    }
+  }
+}

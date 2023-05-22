@@ -19,6 +19,24 @@
     opacity: 0.6;
     filter: blur(250px);
   }
+  &--bg {
+    padding-top: 240px;
+    @include response(1200px) {
+      padding-top: 48px;
+    }
+  }
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   &__label {
     position: relative;
   }
@@ -159,6 +177,7 @@
   &__item-hover-img {
     position: relative;
     flex: 0 0 auto;
+    height: 48px;
   }
   &__item-btn-box {
     position: relative;
@@ -223,6 +242,9 @@
     margin-right: auto;
     span {
       color: #ff914f;
+    }
+    .accounts--bg & {
+      color: #cccdd2;
     }
   }
 }
