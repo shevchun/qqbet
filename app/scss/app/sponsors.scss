@@ -1,0 +1,47 @@
+.sponsors {
+  position: relative;
+  padding-top: 20px;
+  border-top: 1px solid #cccdd2;
+  display: flex;
+  align-items: center;
+  @include response(1200px) {
+    display: block;
+  }
+  &__text {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: #011955;
+    @include response(1200px) {
+      margin-bottom: 25px;
+    }
+  }
+  &__box {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    @include response(767px) {
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    position: relative;
+    flex: 0 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-right: 1px solid #cccdd2;
+    @include response(1200px) {
+      padding-left: 10px;
+      padding-right: 10px;
+      border-right: 0;
+    }
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+  }
+}
