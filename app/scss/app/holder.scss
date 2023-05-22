@@ -28,6 +28,9 @@
     @include response(1200px) {
       padding-bottom: 48px;
     }
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
   &__content-main {
     position: relative;
@@ -189,6 +192,9 @@
         opacity: 1;
         transform: translateX(0);
       }
+      .holder__aside-games-item-icon--rectangle {
+        background: #fff;
+      }
     }
     &:last-child {
       margin-bottom: 0;
@@ -207,6 +213,11 @@
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
+    &--rectangle {
+      flex: 0 0 100px;
+      max-width: 100px;
+      border-radius: 5px;
+    }
   }
   &__aside-games-item-title {
     position: relative;

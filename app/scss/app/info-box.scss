@@ -13,6 +13,9 @@
     @include response(1200px) {
       display: block;
     }
+    &--revers {
+      flex-direction: row-reverse;
+    }
   }
   &__content {
     position: relative;
