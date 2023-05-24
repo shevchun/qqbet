@@ -2,6 +2,8 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.text-content > table').wrap('<div class="table-scroll"></div>')
+
   $('.js-close-popup').on('click', ()=> {
     $('.popup').removeClass('active')
   })

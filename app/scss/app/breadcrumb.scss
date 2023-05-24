@@ -7,6 +7,9 @@
   overflow: hidden;
   background: #011955;
   border-radius: 5px;
+  @include response(767px) {
+    overflow-x: auto;
+  }
   li {
     position: relative;
     flex: 0 0 auto;
