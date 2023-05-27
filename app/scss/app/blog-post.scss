@@ -130,6 +130,7 @@
     padding-top: 400px;
     @include response(1200px) {
       padding-top: 48px;
+      max-width: 100%;
     }
   }
 }
