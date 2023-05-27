@@ -15,7 +15,7 @@
   font-size: 16px;
   line-height: 155%;
   text-align: center;
-  color: #000c28;
+  color: #000c28 !important;
   transition: 0.3s ease-in-out;
   @include desktop-hover() {
     box-shadow: 5px 10px 40px rgba(0, 12, 40, 0.1);
