@@ -254,6 +254,16 @@
       fill: #000c28;
     }
   }
+  &__aside-ban-img {
+    display: block;
+    margin-bottom: 30px;
+    @include response(1200px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
   &__aside-sticky {
     display: block;
     position: sticky;

@@ -59,11 +59,11 @@ export default () => {
       })
     }
 
-    $('.accounts__item').eq(0).addClass('active')
-    $('.accounts__item').on('click', function accFunc() {
-      $('.accounts__item').removeClass('active')
-      $(this).addClass('active')
-    })
+    // $('.accounts__item').eq(0).addClass('active')
+    // $('.accounts__item').on('click', function accFunc() {
+    //   $('.accounts__item').removeClass('active')
+    //   $(this).addClass('active')
+    // })
 
     $('.header__mobile-menu').on('click', () => {
       $('.header').toggleClass('active-menu')

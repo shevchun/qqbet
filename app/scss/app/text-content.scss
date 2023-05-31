@@ -181,8 +181,10 @@
   }
   a {
     color: #0d4ee3;
+    font-weight: 700;
+    text-decoration: none;
     @include desktop-hover() {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
   table {

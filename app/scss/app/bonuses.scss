@@ -240,8 +240,12 @@
     font-size: 16px;
     line-height: 155%;
     color: #011955;
-    span {
+    a {
       color: #0d4ee3;
+      text-decoration: none;
+      @include desktop-hover() {
+        text-decoration: underline;
+      }
     }
   }
   &__item-btn-box {
